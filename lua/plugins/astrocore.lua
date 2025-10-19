@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- AstroCore configuration with three-column layout support
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -79,6 +79,17 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+
+        -- Three-column layout mappings
+        ["<leader>fe"] = { "<cmd>Neotree toggle<CR>", desc = "Toggle file explorer" },
+        ["<leader>fo"] = { "<cmd>AerialToggle!<CR>", desc = "Toggle outline" },
+        ["<leader>fw"] = { "<cmd>wincmd =<CR>", desc = "Balance windows" },
+
+        -- Quick navigation between panels
+        ["<C-h>"] = { "<C-w>h", desc = "Navigate left" },
+        ["<C-l>"] = { "<C-w>l", desc = "Navigate right" },
+        ["<C-j>"] = { "<C-w>j", desc = "Navigate down" },
+        ["<C-k>"] = { "<C-w>k", desc = "Navigate up" },
       },
     },
   },
